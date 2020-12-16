@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Starbucks</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="img/l2.png"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textbox">
+                <h2>It's not just coffee<br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                     sed do eiusmod tempor incididunt ut labore et dolore 
+                     magna aliqua.Exercitation ullamco laboris  ex ea commodo consequat. </p>
+                     <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="img/gr.jpeg" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/gr.jpeg" onclick="imgSlider('img/gr.jpeg');changeCircleColor('#017143')"></li>
+            <li><img src="img/br.jpeg" onclick="imgSlider('img/br.jpeg');changeCircleColor('#eb7495')"></li>
+            <li><img src="img/p.jpg" onclick="imgSlider('img/p.jpg');changeCircleColor('#d752b1')"></li>
+            <li><img src="img/ph.jpg" onclick="imgSlider('img/ph.jpg');changeCircleColor('black')"></li>
+        </ul>
+        <!-- <ul class="sci">
+            <li><a href="#"><img src="img/f.png"></a></li>
+            <li><a href="#"><img src="img/tw.jpeg"></a></li>
+            <li><a href="#"><img src="img/in.jpeg"></a></li>
+        </ul> -->
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+    
+</body>
+</html>
